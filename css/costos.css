@@ -1,0 +1,395 @@
+/* ==========================================================================
+   CADI UPCH — COSTOS.CSS (CORREGIDO: OVERLAP Y FILTROS)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO INTERIOR (AJUSTADO PARA NO EMPALMARSE CON EL NAVBAR)
+   -------------------------------------------------------------------------- */
+.hero-interior {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-top: calc(var(--alto-navbar, 76px) + 60px) !important; /* Separación exacta del Navbar */
+    padding-bottom: clamp(40px, 6vw, 70px);
+    background: radial-gradient(ellipse at top, rgba(0, 141, 218, 0.12) 0%, transparent 60%);
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. FILTRO DE CATEGORÍAS Y BOTONES (DESPLIEGUE FLUIDO CORREGIDO)
+   -------------------------------------------------------------------------- */
+.cost-filter-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--texto-mutado, #B0BED0);
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap; /* Evita que el texto dentro del botón se rompa */
+}
+
+.filter-btn:hover {
+    color: #FFFFFF;
+    border-color: rgba(0, 240, 255, 0.4);
+    background: rgba(0, 240, 255, 0.06);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--neon-cyan, #00F0FF);
+    color: #030914;
+    border-color: var(--neon-cyan, #00F0FF);
+    box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   3. GRID DE TARJETAS DE PRECIOS
+   -------------------------------------------------------------------------- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 28px;
+    position: relative;
+    background: rgba(11, 25, 44, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    min-width: 0;
+    overflow: hidden;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.price-card.featured-gold {
+    background: linear-gradient(135deg, rgba(255, 184, 0, 0.06), rgba(8, 21, 38, 0.95));
+    border-color: rgba(255, 184, 0, 0.35);
+}
+
+.price-card.featured-gold:hover {
+    border-color: #FFB800;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 184, 0, 0.25);
+}
+
+/* Píldoras de categoría */
+.price-badge-pill {
+    align-self: flex-start;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-badge-pill.cyan-badge {
+    color: #00F0FF;
+    background: rgba(0, 240, 255, 0.08);
+    border-color: rgba(0, 240, 255, 0.25);
+}
+
+.price-badge-pill.gold-badge {
+    color: #0F172A;
+    background: linear-gradient(135deg, #F59E0B, #FFCF40);
+    border-color: #FCD34D;
+}
+
+.price-badge-pill.rojo-badge {
+    color: #FF2A2A;
+    background: rgba(255, 42, 42, 0.08);
+    border-color: rgba(255, 42, 42, 0.25);
+}
+
+.price-title {
+    font-size: 1.35rem;
+    font-weight: 850;
+    margin-bottom: 4px;
+    color: #FFFFFF;
+}
+
+.price-sub {
+    font-size: 0.85rem;
+    color: #B0BED0;
+    margin-bottom: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   4. MONTO FINANCIERO COMPACTO
+   -------------------------------------------------------------------------- */
+.price-amount {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 2px;
+    font-size: clamp(2rem, 3.2vw, 2.6rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.price-amount .currency {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 700;
+}
+
+.price-amount .cents {
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    font-weight: 700;
+}
+
+.price-amount .period {
+    font-size: clamp(0.75rem, 1vw, 0.85rem);
+    color: #94A3B8;
+    font-weight: 500;
+    margin-left: 6px;
+    white-space: nowrap;
+}
+
+/* Lista de Beneficios */
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    flex: 1;
+}
+
+.price-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: #E2E8F0;
+    margin-bottom: 12px;
+}
+
+.price-features li i {
+    color: #00F0FF;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. ESTILOS DE BOTONES
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-secondary-glass {
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary-glass:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #F59E0B, #FFCF40);
+    color: #0F172A;
+    font-weight: 900;
+    box-shadow: 0 0 15px rgba(255, 184, 0, 0.25);
+}
+
+.btn-gold:hover {
+    background: linear-gradient(135deg, #FFCF40, #F59E0B);
+    box-shadow: 0 0 25px rgba(255, 184, 0, 0.45);
+    transform: translateY(-2px);
+    color: #000000;
+}
+
+.w-full { width: 100%; }
+.mt-4 { margin-top: 1.5rem; }
+
+/* --------------------------------------------------------------------------
+   6. PASO A PASO DE PAGO
+   -------------------------------------------------------------------------- */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.step-card {
+    background: rgba(8, 21, 38, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px 28px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 240, 255, 0.2);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.step-card h4 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.step-card p {
+    font-size: 0.92rem;
+    color: #B0BED0;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   7. CAJA DE ADVERTENCIA DE TRANSFERENCIAS
+   -------------------------------------------------------------------------- */
+.warning-banner-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    background: rgba(255, 42, 42, 0.06);
+    border: 1px solid rgba(255, 42, 42, 0.35);
+    border-radius: 24px;
+    padding: 35px;
+    margin-top: 50px;
+    box-shadow: 0 15px 35px rgba(255, 42, 42, 0.1);
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.warning-icon {
+    font-size: 3rem;
+    color: #FF2A2A;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.warning-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.warning-content h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+}
+
+.warning-content p {
+    font-size: 0.95rem;
+    color: #E2E8F0;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.text-rojo { color: #FF2A2A !important; }
+.text-gold { color: #FFB800 !important; }
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVO DE COSTOS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+    .price-amount { font-size: 2.2rem; }
+}
+
+@media (max-width: 992px) {
+    .pricing-grid, 
+    .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-interior {
+        padding-top: calc(var(--alto-navbar, 70px) + 40px) !important;
+    }
+
+    .cost-filter-wrapper {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-grid, 
+    .steps-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cost-filter-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .warning-banner-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+        margin-top: 35px;
+    }
+    
+    .price-amount { font-size: 2.4rem; }
+}

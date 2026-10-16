@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de Aprendizaje de Idiomas (CADI) de la Universidad Popular de la Chontalpa. Formación lingüística y Certificación Oficial.">
+    <title>CADI - Centro de Aprendizaje de Idiomas | UPCH</title>
+    
+    <!-- Hojas de Estilos Locales -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Tipografía Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- ENCABEZADO Y NAVEGACIÓN (CON EFECTO GLASS) -->
+    <!-- ========================================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-badge glow-badge">UPCH</div>
+                <div class="logo-text">
+                    <span class="brand-title">CADI</span>
+                    <span class="brand-sub">Centro de Aprendizaje de Idiomas</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="oferta-academica.html" class="nav-link">Oferta Académica</a>
+                <a href="toefl-certificaciones.html" class="nav-link">TOEFL & Certificaciones</a>
+                <a href="convocatorias-costos.html" class="nav-link">Costos</a>
+                <a href="https://alumnos.cadi.upch.mx" class="btn-sia-nav neon-border">
+                    <i class="bi bi-person-bounding-box"></i> Acceso SIA
+                </a>
+            </nav>
+
+            <div class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION (LUCES AMBIENTALES Y ANIMACIÓN)-->
+    <!-- ========================================== -->
+    <section class="hero">
+        <!-- Luces llamativas de fondo (Glow Orbs) -->
+        <div class="ambient-light light-1"></div>
+        <div class="ambient-light light-2"></div>
+        <div class="hero-particles"></div> <!-- Contenedor para partículas CSS -->
+
+        <div class="container hero-container-split">
+            <div class="hero-content fade-in-up">
+                <span class="hero-badge-pill glowing-pill">
+                    <i class="bi bi-stars"></i> Innovación Educativa UPCH
+                </span>
+                <h1 class="hero-title">Formando hoy a los <span class="highlight-text-glow">profesionales del futuro</span></h1>
+                <p class="hero-subtitle">
+                    El Centro de Aprendizaje de Idiomas te prepara con los más altos estándares. Alineación MCER, certificación TOEFL ITP y tecnología interactiva para tu desarrollo.
+                </p>
+                <div class="hero-buttons">
+                    <a href="oferta-academica.html" class="btn btn-primary-blue glow-effect">
+                        Descubre la oferta <i class="bi bi-arrow-right"></i>
+                        <span class="light-sweep"></span> <!-- Brillo que pasa sobre el botón -->
+                    </a>
+                    <a href="convocatorias-costos.html" class="btn btn-secondary-glass hover-glow">
+                        Ver Convocatorias
+                    </a>
+                </div>
+            </div>
+
+            <!-- Imagen Flotante con reflejo -->
+            <div class="hero-image-wrapper floating-anim fade-in-up delay-1">
+                <div class="glass-reflection"></div>
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000" alt="Edificio CADI UPCH">
+                <div class="hero-image-badge-overlay neon-text">
+                    Más que un centro, <span>es tu futuro</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- STRIP DE CARACTERÍSTICAS (HOVER LUMINOSO)  -->
+    <!-- ========================================== -->
+    <section class="features-strip">
+        <div class="container features-grid">
+            <div class="feature-item hover-illuminate">
+                <i class="bi bi-building feature-icon"></i>
+                <div class="feature-text">
+                    <h4>Infraestructura Moderna</h4>
+                    <p>Espacios interactivos</p>
+                </div>
+            </div>
+            <div class="feature-item hover-illuminate">
+                <i class="bi bi-mortarboard-fill feature-icon"></i>
+                <div class="feature-text">
+                    <h4>Calidad MCER</h4>
+                    <p>Estándar internacional</p>
+                </div>
+            </div>
+            <div class="feature-item hover-illuminate">
+                <i class="bi bi-translate feature-icon"></i>
+                <div class="feature-text">
+                    <h4>Multilingüismo</h4>
+                    <p>Inglés, Francés y Yokot'an</p>
+                </div>
+            </div>
+            <div class="feature-item hover-illuminate">
+                <i class="bi bi-award-fill feature-icon"></i>
+                <div class="feature-text">
+                    <h4>Acreditación Oficial</h4>
+                    <p>Centro Autorizado TOEFL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN DE PRESENTACIÓN (CON PULSO DE LUZ) -->
+    <!-- ========================================== -->
+    <section class="section-split-content relative-section">
+        <!-- Luz sutil de fondo -->
+        <div class="ambient-light light-3"></div>
+
+        <div class="container grid-2col">
+            <div class="scroll-reveal">
+                <span class="section-tag-pill glow-text-subtle">
+                    <i class="bi bi-lightning-charge-fill"></i> EXPERIENCIA CADI
+                </span>
+                <h2 class="section-heading-dark">
+                    Un ecosistema diseñado para <span class="text-gradient">potenciar tu talento</span>
+                </h2>
+                <p class="section-text-muted">
+                    Nuestros programas académicos integran tecnología de vanguardia y metodologías inmersivas para garantizar que alcances el nivel requerido para tu titulación y éxito profesional.
+                </p>
+                <ul class="checklist-stylish interactive-list">
+                    <li><div class="icon-glow-box"><i class="bi bi-check-lg"></i></div> 8 niveles de inglés (640 hrs)</li>
+                    <li><div class="icon-glow-box"><i class="bi bi-check-lg"></i></div> Exámenes TOEFL ITP y constancias CENNI</li>
+                    <li><div class="icon-glow-box"><i class="bi bi-check-lg"></i></div> Plataforma digital SIA 2.0 integral</li>
+                </ul>
+            </div>
+
+            <!-- Contenedor de Video con Anillos de Luz -->
+            <div class="card-video-preview scroll-reveal delay-1 hover-scale-glow">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800" alt="Instalaciones CADI UPCH">
+                <div class="play-btn-wrapper">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring delay"></div>
+                    <div class="play-btn-overlay">
+                        <i class="bi bi-play-fill"></i>
+                        <span>Ver recorrido</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- GALERÍA (TARJETAS NEÓN EN FONDO OSCURO)    -->
+    <!-- ========================================== -->
+    <section class="dark-gallery-section">
+        <div class="ambient-light light-4"></div>
+        <div class="container">
+            <div class="dark-gallery-header scroll-reveal">
+                <span class="dark-gallery-subtag neon-text-blue">PROGRAMAS ESTRELLA</span>
+                <h2>Explora nuestra oferta educativa</h2>
+            </div>
+
+            <div class="dark-gallery-grid">
+                <div class="gallery-card neon-hover scroll-reveal delay-1">
+                    <div class="card-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?q=80&w=500" alt="Inglés General">
+                    <div class="gallery-card-info">
+                        <h4>Inglés General</h4>
+                        <p>Niveles I al VIII</p>
+                    </div>
+                </div>
+                <div class="gallery-card neon-hover scroll-reveal delay-2">
+                    <div class="card-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500" alt="Inglés Jr">
+                    <div class="gallery-card-info">
+                        <h4>Inglés Jr.</h4>
+                        <p>Jóvenes de 12-16 años</p>
+                    </div>
+                </div>
+                <div class="gallery-card neon-hover scroll-reveal delay-3">
+                    <div class="card-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=500" alt="TOEFL ITP">
+                    <div class="gallery-card-info">
+                        <h4>Certificación TOEFL</h4>
+                        <p>Preparación intensiva</p>
+                    </div>
+                </div>
+                <div class="gallery-card neon-hover scroll-reveal delay-4">
+                    <div class="card-glare"></div>
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=500" alt="Cultura e Idiomas">
+                    <div class="gallery-card-info">
+                        <h4>Francés & Yokot'an</h4>
+                        <p>Patrimonio y diversidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- CALLOUT (BANNER CON EFECTO LUMINOSO)       -->
+    <!-- ========================================== -->
+    <section class="callout-banner-section scroll-reveal">
+        <div class="container">
+            <div class="callout-box animated-gradient-border">
+                <div class="callout-content">
+                    <h2 class="text-glow-dark">Tu plataforma académica 24/7</h2>
+                    <p>El CADI UPCH se renueva para ti. Crea tu cuenta en el sistema SIA y gestiona tus próximas inscripciones, monitorea tu progreso académico y descarga tus constancias oficiales de forma rápida y segura. Tu trayectoria y tus documentos, disponibles las 24 horas desde cualquier dispositivo.</p>
+                </div>
+<a href="#!" id="btn-crear-cuenta" class="btn btn-primary-blue btn-large-callout glow-effect">
+    <i class="bi bi-box-arrow-in-right"></i> Crear cuenta
+    <span class="light-sweep"></span>
+</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN DE UBICACIÓN Y MAPA                -->
+    <!-- ========================================== -->
+    <section class="section relative-section" id="ubicacion">
+        <div class="ambient-light light-3"></div>
+        <div class="container grid-2col align-center">
+            
+            <!-- Texto de Ubicación -->
+            <div class="location-content scroll-reveal">
+                <span class="section-tag-pill"><i class="bi bi-geo-alt-fill"></i> UBICACIÓN OFICIAL</span>
+                <h2 class="section-heading-dark">Nos encontramos en la <br><span class="text-gradient">UPCH</span></h2>
+                <p class="section-text-muted">
+                    El Centro de Aprendizaje de Idiomas (CADI) está ubicado estratégicamente dentro del campus universitario de la Universidad Popular de la Chontalpa. Te esperamos en nuestras instalaciones equipadas con tecnología de vanguardia.
+                </p>
+                
+                <ul class="interactive-list mt-4">
+                    <li>
+                        <div class="icon-glow-box"><i class="bi bi-building"></i></div> 
+                        <span><strong>CADI (Edificio E)</strong>, Universidad Popular de la Chontalpa</span>
+                    </li>
+                    <li>
+                        <div class="icon-glow-box"><i class="bi bi-map"></i></div> 
+                        <span>Carretera Cárdenas-Huimanguillo Km 2 S/N, Ranchería, Invitab Paso y Playa, 86556, Cárdenas, Tab.</span>
+                    </li>
+                    <li>
+                        <div class="icon-glow-box"><i class="bi bi-clock-fill"></i></div> 
+                        <span>Lunes a Viernes: <strong>8:00 h - 16:00 h</strong></span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mapa Interactivo (Modo Oscuro aplicado por CSS) -->
+            <div class="glass-card scroll-reveal delay-1" style="padding: 12px;">
+                <div class="map-wrapper">
+                    <!-- Iframe de Google Maps apuntando a la dirección exacta -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Carretera%20Cárdenas-Huimanguillo%20Km%202%20S/N,%20Ranchería,%20Invitab%20Paso%20y%20Playa,%2086556,%20Cárdenas,%20Tab.&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PIE DE PÁGINA (FOOTER)                     -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo-footer glow-hover">
+                    <div class="logo-badge">UPCH</div>
+                    <span class="footer-brand-text">CADI</span>
+                </div>
+                <p class="footer-desc">
+                    Formando líderes globales desde 2009. Centro de Aprendizaje de Idiomas de la UPCH.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="oferta-academica.html">Oferta Académica</a></li>
+                    <li><a href="toefl-certificaciones.html">Certificaciones</a></li>
+                    <li><a href="convocatorias-costos.html">Costos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Accesos Rápidos</h4>
+                <ul>
+                    <li><a href="sia-cadi.html">Portal SIA</a></li>
+                    <li><a href="https://pagos.upch.mx" target="_blank">Pagos en Línea</a></li>
+                    <li><a href="mailto:cadi@upch.mx">Soporte Técnico</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="bi bi-geo-alt-fill neon-icon"></i> Edificio E, Campus UPCH</p>
+                <p><i class="bi bi-envelope-at-fill neon-icon"></i> cadi@upch.mx</p>
+                <p><i class="bi bi-clock-fill neon-icon"></i> L-V: 8:00 h - 16:00 h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 CADI UPCH. Todos los derechos reservados.</p>
+                <p class="glow-text-subtle">Origen y Esperanza</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- MODAL SOBREPUESTO: CONVOCATORIA CERRADA    -->
+    <!-- ========================================== -->
+    <div id="mi-modal-convocatoria" class="modal-overlay">
+        <div class="modal-box">
+            <!-- Icono grande azul -->
+            <div class="modal-icon">
+                <i class="bi bi-info-circle"></i>
+            </div>
+            <!-- Textos -->
+            <h3 class="modal-title">Convocatoria Cerrada</h3>
+            <p class="modal-text">Por el momento no hay periodos de inscripción abiertos.</p>
+            <p class="modal-date">(2026-10-15 18:13:13)</p>
+            <!-- Botón de cerrado -->
+            <button id="btn-cerrar-modal" class="modal-btn-close">Entendido</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

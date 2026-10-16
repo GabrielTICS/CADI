@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convocatorias y Arancel Oficial de Costos CADI UPCH 2026. Inscripciones, Exámenes de Colocación, TOEFL ITP y procedimiento de pago oficial.">
+    <title>Convocatorias y Costos 2026 | CADI UPCH</title>
+    
+    <!-- Hojas de Estilos -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/costos.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Tipografía Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- NAVBAR (GLASSMORPHISM)                     -->
+    <!-- ========================================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-badge glow-badge">UPCH</div>
+                <div class="logo-text">
+                    <span class="brand-title">CADI</span>
+                    <span class="brand-sub">Centro de Aprendizaje de Idiomas</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="oferta-academica.html" class="nav-link">Oferta Académica</a>
+                <a href="toefl-certificaciones.html" class="nav-link">TOEFL & Certificaciones</a>
+                <a href="convocatorias-costos.html" class="nav-link active">Costos</a>
+                <a href="https://alumnos.cadi.upch.mx" class="btn-sia-nav neon-border">
+                    <i class="bi bi-person-bounding-box"></i> Acceso SIA
+                </a>
+            </nav>
+
+            <div class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- HERO INTERIOR (CONVOCATORIAS 2026)         -->
+    <!-- ========================================== -->
+    <section class="hero-interior relative-section">
+        <div class="ambient-light light-1"></div>
+        <div class="ambient-light light-2" style="background: rgba(0, 240, 255, 0.15);"></div>
+        
+        <div class="container text-center scroll-reveal">
+            <span class="badge glow-text-subtle mb-4">
+                <i class="bi bi-receipt-cutoff"></i> ARANCEL OFICIAL 2026
+            </span>
+            <h1 class="section-title">Transparencia y costos <br><span class="text-gradient">accesibles para todos</span></h1>
+            <p class="section-description mx-auto mt-3">
+                Consulta las tarifas vigentes aprobadas para la comunidad de la Universidad Popular de la Chontalpa y el público en general.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FILTRO INTERACTIVO Y CALCULADORA           -->
+    <!-- ========================================== -->
+    <section class="section relative-section" style="padding-top: 0;">
+        <div class="container">
+            <!-- Selector de perfil -->
+            <div class="cost-filter-wrapper scroll-reveal">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="bi bi-grid-fill"></i> Todos los servicios
+                </button>
+                <button class="filter-btn" data-filter="upch">
+                    <i class="bi bi-mortarboard-fill"></i> Comunidad UPCH
+                </button>
+                <button class="filter-btn" data-filter="general">
+                    <i class="bi bi-people-fill"></i> Público General
+                </button>
+            </div>
+
+            <!-- GRID DE TARJETAS DE PRECIOS -->
+            <div class="pricing-grid">
+                
+                <!-- TARJETA 1: Inglés Presencial UPCH -->
+                <div class="glass-card price-card scroll-reveal" data-category="upch">
+                    <div class="price-badge-pill">Alumno UPCH</div>
+                    <h3 class="price-title">Inglés General Presencial</h3>
+                    <p class="price-sub">Curso Semestral (80 hrs / nivel)</p>
+                    <div class="price-amount">
+                        <span class="currency">$</span>167<span class="cents">.00</span>
+                        <span class="period">/ semestre</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="bi bi-check2-circle"></i> Modalidad Escolarizada o Sabatina</li>
+                        <li><i class="bi bi-check2-circle"></i> Acceso completo a plataforma SIA</li>
+                        <li><i class="bi bi-check2-circle"></i> Material digital y asesorías</li>
+                    </ul>
+                    <a href="https://pagos.upch.mx" target="_blank" class="btn btn-secondary-glass w-full mt-4">
+                        Pagar en Pagos UPCH
+                    </a>
+                </div>
+
+                <!-- TARJETA 2: Inglés en Línea UPCH / General -->
+                <div class="glass-card price-card scroll-reveal delay-1" data-category="upch general">
+                    <div class="price-badge-pill cyan-badge">En Línea</div>
+                    <h3 class="price-title">Inglés General en Línea</h3>
+                    <p class="price-sub">Alumnos UPCH y Público General</p>
+                    <div class="price-amount">
+                        <span class="currency">$</span>2,478<span class="cents">.00</span>
+                        <span class="period">/ semestre</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="bi bi-check2-circle"></i> Clases 100% virtuales y asincrónicas</li>
+                        <li><i class="bi bi-check2-circle"></i> Flexibilidad de horarios 24/7</li>
+                        <li><i class="bi bi-check2-circle"></i> Evaluaciones automatizadas</li>
+                    </ul>
+                    <a href="https://pagos.upch.mx" target="_blank" class="btn btn-secondary-glass w-full mt-4">
+                        Pagar en Pagos UPCH
+                    </a>
+                </div>
+
+                <!-- TARJETA 3: Público General Presencial -->
+                <div class="glass-card price-card scroll-reveal delay-2" data-category="general">
+                    <div class="price-badge-pill">Público General</div>
+                    <h3 class="price-title">Inglés General Presencial</h3>
+                    <p class="price-sub">Comunidad Externa</p>
+                    <div class="price-amount">
+                        <span class="currency">$</span>2,581<span class="cents">.00</span>
+                        <span class="period">/ semestre</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="bi bi-check2-circle"></i> Acceso a instalaciones del Edificio E</li>
+                        <li><i class="bi bi-check2-circle"></i> Docentes certificados por MCER</li>
+                        <li><i class="bi bi-check2-circle"></i> Constancia con validez oficial</li>
+                    </ul>
+                    <a href="https://pagos.upch.mx" target="_blank" class="btn btn-secondary-glass w-full mt-4">
+                        Pagar en Pagos UPCH
+                    </a>
+                </div>
+
+                <!-- TARJETA 4: Inglés Jr. -->
+                <div class="glass-card price-card scroll-reveal delay-1" data-category="general">
+                    <div class="price-badge-pill rojo-badge">12 a 16 años</div>
+                    <h3 class="price-title">Inglés Jr. (Juvenil)</h3>
+                    <p class="price-sub">Sábados o Domingos</p>
+                    <div class="price-amount">
+                        <span class="currency">$</span>1,245<span class="cents">.00</span>
+                        <span class="period">/ semestre</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="bi bi-check2-circle"></i> 6 Niveles progresivos</li>
+                        <li><i class="bi bi-check2-circle"></i> Preparación orientada a TOEFL Jr.</li>
+                        <li><i class="bi bi-check2-circle"></i> Horario conveniente de fin de semana</li>
+                    </ul>
+                    <a href="https://pagos.upch.mx" target="_blank" class="btn btn-secondary-glass w-full mt-4">
+                        Pagar en Pagos UPCH
+                    </a>
+                </div>
+
+                <!-- TARJETA 5: Examen TOEFL ITP -->
+                <div class="glass-card price-card featured-gold scroll-reveal delay-2" data-category="upch general">
+                    <div class="price-badge-pill gold-badge">Oficial ETS</div>
+                    <h3 class="price-title text-gold">Examen TOEFL ITP</h3>
+                    <p class="price-sub">Aplicación e Impresión de Folio</p>
+                    <div class="price-amount text-gold">
+                        <span class="currency">$</span>1,354<span class="cents">.00</span>
+                        <span class="period">/ aplicación</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="bi bi-check2-circle text-gold"></i> Válido para Titulación UPCH</li>
+                        <li><i class="bi bi-check2-circle text-gold"></i> Equivalencia CENNI / SEP</li>
+                        <li><i class="bi bi-check2-circle text-gold"></i> Cupo limitado a 120 lugares</li>
+                    </ul>
+                    <a href="https://pagos.upch.mx" target="_blank" class="btn btn-gold glow-effect-gold w-full mt-4">
+                        Pagar Aplicación
+                    </a>
+                </div>
+
+                <!-- TARJETA 6: Examen de Colocación -->
+                <div class="glass-card price-card scroll-reveal delay-3" data-category="upch general">
+                    <div class="price-badge-pill">Diagnóstico</div>
+                    <h3 class="price-title">Examen de Colocación</h3>
+                    <p class="price-sub">Ubicación de Nivel CADI</p>
+                    <div class="price-amount">
+                        <span class="currency">$</span>167<span class="cents">.00</span>
+                        <span class="period">/ evaluación</span>
+                    </div>
+                    <ul class="price-features">
+                        <li><i class="bi bi-check2-circle"></i> Determina tu nivel exacto (I al VIII)</li>
+                        <li><i class="bi bi-check2-circle"></i> Evita cursar desde el Nivel I</li>
+                        <li><i class="bi bi-check2-circle"></i> Resultados inmediatos en SIA</li>
+                    </ul>
+                    <a href="https://pagos.upch.mx" target="_blank" class="btn btn-secondary-glass w-full mt-4">
+                        Pagar Colocación
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PROCEDIMIENTO OFICIAL DE PAGO Y ALERTAS    -->
+    <!-- ========================================== -->
+    <section class="section relative-section" style="background: rgba(3, 9, 20, 0.5); border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Procedimiento Oficial de <span class="text-gradient">Pago</span></h2>
+                <p>Sigue detenidamente estos tres pasos para validar tu inscripción o ficha de examen ante la coordinación escolar del CADI.</p>
+            </div>
+
+            <!-- PASO A PASO -->
+            <div class="steps-grid scroll-reveal delay-1">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h4>Ingresa a pagos.upch.mx</h4>
+                    <p>Accede al portal oficial de pagos de la universidad o acude directamente a las Cajas del Campus Universitario.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h4>Selecciona el Concepto</h4>
+                    <p>Elige el servicio CADI correspondiente (Inscripción, TOEFL ITP o Colocación) e imprime/descarga tu recibo con folio único.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h4>Envía tu Comprobante</h4>
+                    <p>Escanea tu ticket original y envíalo al correo <strong>cadi@upch.mx</strong> especificando tu Matrícula y Nombre Completo.</p>
+                </div>
+            </div>
+
+            <!-- ADVERTENCIA RÍGIDA SOBRE TRANSFERENCIAS BANCARIAS -->
+            <div class="warning-banner-box scroll-reveal delay-2 mt-5">
+                <div class="warning-icon">
+                    <i class="bi bi-shield-slash-fill"></i>
+                </div>
+                <div class="warning-content">
+                    <h3 class="text-rojo">AVISO IMPORTANTE: NO SE ACEPTAN TRANSFERENCIAS DIRECTAS</h3>
+                    <p>
+                        Por normatividad contable de la Universidad Popular de la Chontalpa, <strong>estrictamente NO se reciben pagos vía transferencia bancaria SPEI directa a cuentas institucionales</strong>. Todo pago debe tramitarse exclusivamente a través del portal <a href="https://pagos.upch.mx" target="_blank" style="color: var(--neon-cyan); font-weight: 700;">pagos.upch.mx</a> o en las Cajas de la Universidad. Los pagos por transferencia directa no podrán ser validados ni reembolsados.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOOTER GLOBAL                              -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo-footer">
+                    <div class="logo-badge glow-badge">UPCH</div>
+                    <span class="footer-brand-text">CADI</span>
+                </div>
+                <p class="footer-desc">Centro de Aprendizaje de Idiomas de la UPCH. Edificio E, Cárdenas, Tabasco.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="oferta-academica.html">Oferta Académica</a></li>
+                    <li><a href="toefl-certificaciones.html">Certificaciones</a></li>
+                    <li><a href="convocatorias-costos.html">Costos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Accesos Rápidos</h4>
+                <ul>
+                    <li><a href="sia-cadi.html">Portal SIA</a></li>
+                    <li><a href="https://pagos.upch.mx" target="_blank">Pagos en Línea</a></li>
+                    <li><a href="mailto:cadi@upch.mx">Soporte Técnico</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="bi bi-geo-alt-fill neon-icon"></i> Edificio E, Campus UPCH</p>
+                <p><i class="bi bi-envelope-at-fill neon-icon"></i> cadi@upch.mx</p>
+                <p><i class="bi bi-clock-fill neon-icon"></i> L-V: 8:00 h - 16:00 h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 CADI UPCH. Todos los derechos reservados.</p>
+                <p class="text-muted">Origen y Esperanza</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/costos.js"></script>
+</body>
+</html>

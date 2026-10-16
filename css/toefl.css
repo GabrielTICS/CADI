@@ -1,0 +1,488 @@
+﻿/* ==========================================================================
+   CADI UPCH — TOEFL.CSS (CORREGIDO Y OPTIMIZADO)
+   Estilos exclusivos para TOEFL & Certificaciones (Acentos Dorados)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES Y ESTRUCTURA BASE DE SECCIÓN
+   -------------------------------------------------------------------------- */
+:root {
+    --neon-oro: #FFB800;
+    --neon-oro-dim: rgba(255, 184, 0, 0.25);
+    --gradiente-oro: linear-gradient(135deg, #F59E0B, #FFCF40);
+    --glow-oro-suave: 0 0 15px var(--neon-oro-dim);
+    --glow-oro-fuerte: 0 0 15px var(--neon-oro-dim), 0 0 30px rgba(255, 184, 0, 0.45);
+}
+
+/* Base de Secciones e Iluminación Ambiental */
+.relative-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-interior {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-top: clamp(140px, 15vw, 180px);
+    padding-bottom: clamp(60px, 8vw, 90px);
+    background: radial-gradient(ellipse at top, rgba(255, 184, 0, 0.08) 0%, transparent 60%);
+    text-align: center;
+}
+
+.ambient-light {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.55;
+    pointer-events: none;
+    animation: breatheOrb 10s ease-in-out infinite alternate;
+    will-change: transform, opacity;
+}
+
+.light-gold-1 {
+    top: -5%;
+    left: 10%;
+    width: clamp(300px, 50vw, 600px);
+    aspect-ratio: 1;
+    background: rgba(255, 184, 0, 0.15);
+    animation-delay: -2s;
+}
+
+.light-1 {
+    top: -10%;
+    left: -10%;
+    width: clamp(250px, 40vw, 500px);
+    aspect-ratio: 1;
+    background: rgba(0, 141, 218, 0.25);
+}
+
+.light-3 {
+    top: 30%;
+    left: 50%;
+    width: clamp(300px, 55vw, 800px);
+    aspect-ratio: 1;
+    background: rgba(255, 184, 0, 0.06);
+    transform: translate(-50%, -50%);
+    animation-delay: -5s;
+}
+
+@keyframes breatheOrb {
+    0% {
+        opacity: 0.35;
+        transform: scale(0.95) translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0.65;
+        transform: scale(1.08) translate3d(20px, -15px, 0);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. ESTRUCTURA DE RETÍCULA Y ETIQUETAS
+   -------------------------------------------------------------------------- */
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: clamp(35px, 6vw, 75px);
+}
+
+.grid-2col > * {
+    min-width: 0;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.section-tag-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    color: var(--texto-plata);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+.section-heading-dark {
+    margin-bottom: 20px;
+    color: var(--texto-blanco);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+}
+
+.section-text-muted {
+    margin-bottom: 26px;
+    color: var(--texto-mutado);
+    font-size: clamp(1rem, 1.4vw, 1.08rem);
+    line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   3. TEXTOS, BADGES Y DEGRADADOS DE PRESTIGIO
+   -------------------------------------------------------------------------- */
+.text-gold {
+    color: var(--neon-oro) !important;
+    text-shadow: 0 0 15px var(--neon-oro-dim);
+}
+
+.text-gradient-gold {
+    background: var(--gradiente-oro);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(255, 184, 0, 0.2));
+}
+
+.badge-gold {
+    color: #0F172A !important;
+    background: var(--gradiente-oro) !important;
+    border: 1px solid #FCD34D !important;
+    box-shadow: var(--glow-oro-suave);
+    font-weight: 800;
+}
+
+.tag-gold {
+    color: var(--neon-oro) !important;
+    border-color: rgba(255, 184, 0, 0.35) !important;
+    background: rgba(255, 184, 0, 0.06) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. PANEL CENTRAL DE CERTIFICACIÓN (350 PUNTOS)
+   -------------------------------------------------------------------------- */
+.certification-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: clamp(35px, 5vw, 60px);
+    background: linear-gradient(135deg, rgba(255, 184, 0, 0.06), rgba(8, 21, 38, 0.85));
+    border: 1px solid rgba(255, 184, 0, 0.25);
+    border-radius: var(--radio-card, 24px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(255, 184, 0, 0.03);
+}
+
+.panel-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.panel-icon {
+    flex: 0 0 160px;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    background: rgba(3, 9, 20, 0.85);
+    border-radius: 50%;
+    border: 2px solid var(--neon-oro);
+    color: var(--neon-oro);
+    box-shadow: var(--glow-oro-fuerte), inset 0 0 20px var(--neon-oro-dim);
+    animation: floatGold 6s ease-in-out infinite;
+}
+
+.neon-gold-glow {
+    box-shadow: 0 0 25px rgba(255, 184, 0, 0.35);
+}
+
+@keyframes floatGold {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-12px) scale(1.03); box-shadow: 0 0 40px rgba(255, 184, 0, 0.5), inset 0 0 25px var(--neon-oro-dim); }
+}
+
+.logos-auth {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.auth-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--texto-plata);
+    transition: var(--transicion-rapida, all 0.25s ease);
+}
+
+.auth-pill:hover {
+    background: rgba(255, 184, 0, 0.08);
+    border-color: rgba(255, 184, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+.auth-pill i {
+    color: var(--neon-oro);
+    font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. LISTA INTERACTIVA CON CAJAS DE ÍCONOS (LISTA CORREGIDA)
+   -------------------------------------------------------------------------- */
+.interactive-list {
+    display: grid;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.interactive-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    color: var(--texto-plata);
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.6;
+    list-style: none;
+}
+
+.interactive-list li::before {
+    content: none;
+}
+
+.icon-glow-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    color: var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid rgba(0, 240, 255, 0.65);
+    border-radius: 9px;
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.10);
+}
+
+.box-gold {
+    color: var(--neon-oro) !important;
+    background: rgba(255, 184, 0, 0.08) !important;
+    border-color: rgba(255, 184, 0, 0.65) !important;
+    box-shadow: 0 0 12px rgba(255, 184, 0, 0.20) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. CURSO DE PREPARACIÓN (IMAGEN Y BOTONES)
+   -------------------------------------------------------------------------- */
+.image-wrapper-gold {
+    position: relative;
+    border-radius: var(--radio-card, 24px);
+    padding: 3px;
+    background: linear-gradient(135deg, var(--neon-oro), rgba(255, 184, 0, 0.1) 60%);
+    box-shadow: var(--glow-oro-suave);
+    isolation: isolate;
+}
+
+.image-wrapper-gold img {
+    width: 100%;
+    height: clamp(300px, 36vw, 440px);
+    object-fit: cover;
+    border-radius: calc(var(--radio-card, 24px) - 3px);
+}
+
+.floating-badge-gold {
+    position: absolute;
+    bottom: -18px;
+    right: 25px;
+    z-index: 10;
+    background: var(--gradiente-oro);
+    color: #0F172A;
+    padding: 14px 24px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(255, 184, 0, 0.35);
+    text-align: center;
+    border: 2px solid #FFFFFF;
+}
+
+.floating-badge-gold strong {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.floating-badge-gold span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-gold.glow-effect-gold {
+    background: var(--gradiente-oro);
+    color: #0F172A;
+    box-shadow: var(--glow-oro-suave);
+    border: none;
+    font-weight: 800;
+}
+
+.btn-gold.glow-effect-gold:hover {
+    box-shadow: var(--glow-oro-fuerte);
+    transform: translateY(-3px);
+    color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   7. LINEAMIENTOS Y REGLAS (WARNING CARDS)
+   -------------------------------------------------------------------------- */
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.rule-card {
+    padding: 40px 28px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transicion-rapida, all 0.25s ease);
+}
+
+.rule-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 22px;
+    color: var(--neon-cyan);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transicion-fluida, all 0.45s ease);
+}
+
+.rule-icon.text-gold {
+    color: var(--neon-oro) !important;
+    background: rgba(255, 184, 0, 0.06) !important;
+    border-color: rgba(255, 184, 0, 0.25) !important;
+}
+
+.rule-icon.text-rojo {
+    color: var(--neon-rojo, #FF2A2A) !important;
+    background: rgba(255, 42, 42, 0.06) !important;
+    border-color: rgba(255, 42, 42, 0.25) !important;
+}
+
+.rule-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+.rule-card:hover .rule-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.rule-card:hover .rule-icon.text-gold {
+    border-color: var(--neon-oro);
+    box-shadow: var(--glow-oro-suave);
+}
+
+.rule-card:hover .rule-icon.text-rojo {
+    border-color: var(--neon-rojo, #FF2A2A);
+    box-shadow: 0 0 18px rgba(255, 42, 42, 0.3);
+}
+
+.rule-card h4 {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.rule-card p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--texto-mutado);
+}
+
+.text-rojo {
+    color: var(--neon-rojo, #FF2A2A) !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. CLASES UTILITARIAS DE MARGEN
+   -------------------------------------------------------------------------- */
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-5 { margin-top: 2rem !important; }
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVO DE CERTIFICACIONES
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .certification-panel {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 35px 24px;
+    }
+    
+    .logos-auth {
+        justify-content: center;
+    }
+
+    .grid-2col {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .rules-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .panel-icon {
+        flex: 0 0 130px;
+        width: 130px;
+        height: 130px;
+        font-size: 4rem;
+    }
+
+    .floating-badge-gold {
+        right: 50%;
+        transform: translateX(50%);
+        width: 85%;
+        bottom: -22px;
+        padding: 10px 16px;
+    }
+
+    .image-wrapper-gold {
+        margin-bottom: 35px;
+    }
+    
+    .rule-card {
+        padding: 28px 18px;
+    }
+}

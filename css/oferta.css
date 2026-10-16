@@ -1,0 +1,267 @@
+﻿/* ==========================================================================
+   CADI UPCH - OFERTA.CSS (PÁGINA DE OFERTA ACADÉMICA)
+   Diseño de Programas, Tarjetas Flexibles y Tabla MCER
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO INTERIOR (COMPACTO)
+   -------------------------------------------------------------------------- */
+.hero-interior {
+    padding-top: clamp(140px, 15vw, 180px);
+    padding-bottom: clamp(60px, 8vw, 90px);
+    background: radial-gradient(ellipse at top, rgba(0, 141, 218, 0.12) 0%, transparent 60%);
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. LAYOUT DE PROGRAMAS Y TARJETAS PRINCIPALES
+   -------------------------------------------------------------------------- */
+.programs-layout {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(40px, 6vw, 60px);
+}
+
+.program-card {
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+    padding: clamp(30px, 4vw, 50px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Alternar diseño visual de las tarjetas para dinamismo */
+.program-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Contenedores de Iconos Luminosos */
+.program-icon-wrapper {
+    flex: 0 0 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 7rem;
+    background: rgba(3, 9, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transicion-fluida);
+}
+
+.program-card:hover .program-icon-wrapper {
+    transform: scale(1.03);
+}
+
+.neon-cyan-bg {
+    color: var(--neon-cyan);
+    box-shadow: inset 0 0 30px rgba(0, 240, 255, 0.05), 0 0 20px rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.2);
+}
+
+.neon-rojo-bg {
+    color: var(--neon-rojo);
+    box-shadow: inset 0 0 30px rgba(255, 42, 42, 0.05), 0 0 20px rgba(255, 42, 42, 0.1);
+    border-color: rgba(255, 42, 42, 0.2);
+}
+
+/* Contenido del texto de las tarjetas */
+.program-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.program-tag {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--neon-cyan);
+    margin-bottom: 12px;
+}
+
+.text-rojo { color: var(--neon-rojo); }
+.text-cyan { color: var(--neon-cyan); }
+
+/* Grid de detalles (Niveles, Duración, Modalidades) */
+.program-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+    padding-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.detail-item i {
+    font-size: 1.6rem;
+    margin-top: 2px;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.detail-item strong {
+    display: block;
+    color: var(--texto-blanco);
+    font-size: 1rem;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.detail-item span {
+    display: block;
+    color: var(--texto-mutado);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   3. PROGRAMAS SECUNDARIOS (GRID 2 COLUMNAS)
+   -------------------------------------------------------------------------- */
+.secondary-programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(25px, 4vw, 40px);
+}
+
+.program-card-compact {
+    padding: 45px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.compact-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 20px currentColor);
+    transition: var(--transicion-rapida);
+}
+
+.program-card-compact:hover .compact-icon {
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* --------------------------------------------------------------------------
+   4. TABLA MCER (DISEÑO GLASSMORPHISM MULTICAPA)
+   -------------------------------------------------------------------------- */
+.mcer-table-container {
+    padding: 0;
+    overflow: hidden;
+    background: rgba(3, 9, 20, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mcer-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    padding: 24px 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+    gap: 25px;
+    transition: var(--transicion-rapida);
+}
+
+.mcer-row:last-child {
+    border-bottom: none;
+}
+
+.mcer-row:not(.header):hover {
+    background: rgba(0, 240, 255, 0.03);
+    padding-left: 45px; /* Efecto indent visual */
+    border-left: 3px solid var(--neon-cyan);
+}
+
+.mcer-row.header {
+    background: rgba(0, 0, 0, 0.4);
+    font-weight: 800;
+    color: var(--texto-blanco);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.mcer-col {
+    font-size: 0.95rem;
+    color: var(--texto-plata);
+    line-height: 1.6;
+}
+
+.fw-bold {
+    font-weight: 800;
+    color: var(--texto-blanco);
+    font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVO ESPECÍFICO DE ESTA PÁGINA
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    .program-card,
+    .program-card.reverse {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .program-icon-wrapper {
+        flex: 0 0 auto;
+        padding: 50px;
+        font-size: 5rem;
+    }
+
+    .secondary-programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Transformación de la Tabla a Tarjetas para Móviles */
+    .mcer-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 25px;
+    }
+    
+    .mcer-row.header {
+        display: none; /* Ocultamos los encabezados de tabla en móvil */
+    }
+    
+    .mcer-row {
+        border: 1px solid rgba(255,255,255,0.08);
+        margin: 15px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.02);
+    }
+    
+    .mcer-row:not(.header):hover {
+        padding-left: 25px; /* Quitamos el indent agresivo en móvil */
+    }
+}
+
+@media (max-width: 576px) {
+    .program-card {
+        padding: 20px;
+    }
+    .program-icon-wrapper {
+        padding: 30px;
+        font-size: 4rem;
+    }
+    .mcer-table-container {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    .mcer-row {
+        margin: 0 0 20px 0;
+    }
+}
